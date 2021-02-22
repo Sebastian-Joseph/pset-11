@@ -133,7 +133,7 @@ public class ProblemSet11 {
 
     public ArrayList<Integer> fix34(ArrayList<Integer> numbers) {
         try {
-            if (numbers == null) return null;   //The array must not be null
+            if (numbers == null) return null;
 
             boolean flgThreeAppeared = false;
             int cnt3 = 0, cnt4 = 0;
@@ -146,22 +146,22 @@ public class ProblemSet11 {
 
                     if (i < len-1) {
                         if (numbers.get(i+1) == 3)
-                            return null;    //Every 3 has a number after it that is not a 3
+                            return null;
                     }
                     else
-                        return null;    //3 is a last element; Every 3 has a number after it that is not a 4
+                        return null;
                 }
 
                 if (numbers.get(i) == 4) {
                     cnt4++;
 
                     if (!flgThreeAppeared)
-                        return null;    //At least one 3 must appear in the array before the first 4
+                        return null;
                 }
             }
 
             if (cnt3 != cnt4)
-                return null;    //There must be an equal number of 3s and 4s in the array
+                return null;
 
             for (int i=0; i<len; i++) {
                 if (numbers.get(i) == 3) {
@@ -205,7 +205,7 @@ public class ProblemSet11 {
 
     public ArrayList<Integer> fix45(ArrayList<Integer> numbers) {
         try {
-            if (numbers == null) return null;   //The array must not be null
+            if (numbers == null) return null;
 
             int cnt4 = 0, cnt5 = 0;
             int len = numbers.size();
@@ -216,10 +216,10 @@ public class ProblemSet11 {
 
                     if (i < len-1) {
                         if (numbers.get(i+1) == 4)
-                            return null;    //Every 4 has a number after it that is not a 4
+                            return null;
                     }
                     else
-                        return null;    //4 is a last element; Every 4 has a number after it that is not a 5
+                        return null;
                 }
 
                 if (numbers.get(i) == 5)
@@ -227,7 +227,7 @@ public class ProblemSet11 {
             }
 
             if (cnt4 != cnt5)
-                return null;    //There must be an equal number of 4s and 5s in the array
+                return null;
 
             for (int i=0; i<len; i++) {
                 if (numbers.get(i) == 4) {
